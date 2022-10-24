@@ -1,4 +1,4 @@
-from .linear_regression import ClassicLinearRegression, StochasticLinearRegression
+from .linear_regression import LinearRegression, StochasticLinearRegression, RidgeRegression, LassoRegression
 from .logistic_regression import ClassicLogisticRegression, StochasticLogisticRegression
 from .knn import KNearestNeighbours
 from .k_means import KMeans
