@@ -1,9 +1,10 @@
 import numpy as np
 
+
 class DecisionTree:
 
     def __init__(self, task=None):
-        
+
         assert task in ['classification', 'regression']
         self._task = task
 

@@ -1,6 +1,8 @@
+from .base_regression import BaseRegression
 import numpy as np
 
-class ClassicLogisticRegression:
+
+class LogisticRegression(BaseRegression):
 
     def __init__(self):
         pass
@@ -12,8 +14,8 @@ class ClassicLogisticRegression:
         pass
 
 
-class StochasticLogisticRegression:
-    
+class SGDLogisticRegression(BaseRegression):
+
     def __init__(self):
         pass
 
