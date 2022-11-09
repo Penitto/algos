@@ -4,9 +4,6 @@ import numpy as np
 
 class KNNClassifier(BaseClustering):
 
-    def _fit(self, X: np.array, y: np.array):
-        return self
-
     def _predict(self, X: np.array):
 
         classes = self.y[np.argsort(
@@ -22,9 +19,6 @@ class KNNClassifier(BaseClustering):
 
 
 class KNNRegression(BaseClustering):
-
-    def _fit(self, X: np.array, y: np.array):
-        return self
 
     def _predict(self, X: np.array):
 

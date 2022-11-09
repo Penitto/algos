@@ -3,7 +3,7 @@ import numpy as np
 
 class BaseClustering:
 
-    def __init__(self, k: int, task: str, scaling: str, distance_func):
+    def __init__(self, k: int, scaling: str, distance_func):
 
         self.k = k
 
@@ -14,14 +14,6 @@ class BaseClustering:
             return
 
         self._scaling = scaling
-
-        try:
-            assert task in ['classification', 'regression']
-        except AssertionError:
-            print('Uknown task')
-            return 
-
-        self.task = task
 
         # In case with train matrix shape of (rows1, dim)
         # and test matrix shape of (rows2, dim)
@@ -46,8 +38,6 @@ class BaseClustering:
             self.X = (self.X - self.col_mean) / self.col_std
 
         self.y = y
-
-        self._fit(X)
 
         self._fitted = True
         return self

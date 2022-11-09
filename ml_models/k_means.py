@@ -6,13 +6,12 @@ class KMeans(BaseClustering):
 
     def __init__(self,
                  k: int,
-                 task: str,
                  scaling: str,
                  max_iter: int,
                  tol: float,
                  distance_func):
 
-        super().__init__(k, task, scaling, distance_func)
+        super().__init__(k, scaling, distance_func)
         self.max_iter = max_iter
         self.tol = tol
 
@@ -34,7 +33,7 @@ class KMeans(BaseClustering):
                     for i in range(self.k)])
 
     def _predict(self, X: np.array):
-        distances = self.distance_func(self.anchors, self.X)
-        classes = np.argmax(distances, axis=1)
+        distances = self.distance_func(self.anchors, X)
+        classes = np.argmin(distances, axis=1)
 
         return classes
