@@ -1,6 +1,11 @@
 from typing import Union
 
-def recursive_binary_search(array: list, value: Union[int, float], low=0, high=None) -> int:
+
+def recursive_binary_search(
+        array: list,
+        value: Union[int, float],
+        low: int = 0,
+        high: int = None) -> int:
 
     """
     Recursive binary search for SORTED list
@@ -17,8 +22,8 @@ def recursive_binary_search(array: list, value: Union[int, float], low=0, high=N
         # if less
         if value < array[mid]:
             return recursive_binary_search(array, value, low, mid - 1)
-        
-        #if more
+
+        # if more
         elif value > array[mid]:
             return recursive_binary_search(array, value, mid + 1, high)
 
@@ -27,11 +32,12 @@ def recursive_binary_search(array: list, value: Union[int, float], low=0, high=N
     else:
         return -1
 
-def iterative_binary_search(array: list, value:Union[int, float]) -> int:
+
+def iterative_binary_search(
+        array: list,
+        value: Union[int, float]) -> int:
 
     """
     Iterative binary search for SORTED list
     """
     pass
-
-
