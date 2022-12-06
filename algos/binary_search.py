@@ -40,4 +40,17 @@ def iterative_binary_search(
     """
     Iterative binary search for SORTED list
     """
-    pass
+    low = 0
+    high = len(array)
+
+    while high >= low:
+        mid = (high + low) // 2
+
+        if value < array[mid]:
+            high = mid
+        elif value > array[mid]:
+            low = mid
+        else:
+            return mid
+
+    return -1
