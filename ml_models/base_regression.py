@@ -5,7 +5,14 @@ class BaseRegression:
 
     def __init__(self):
 
+        self.w = None
         self._fitted = False
+
+    def _fit(self, X: np.array, y: np.array):
+        raise NotImplementedError("Subclasses must implement _fit method")
+
+    def _predict(self, X: np.array) -> np.array:
+        raise NotImplementedError("Subclasses must implement _predict method")
 
     def fit(self, X: np.array, y: np.array):
         try:
