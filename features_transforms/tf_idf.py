@@ -2,7 +2,7 @@ import numpy as np
 from typing import List
 from collections import defaultdict
 
-
+# Класс
 class TF_IDF_Transformer:
 
     def __init__(self):
