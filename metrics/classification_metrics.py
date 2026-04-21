@@ -1,6 +1,6 @@
 import numpy as np
 
-
+# TP
 def true_positive(y_true: np.array, y_pred: np.array):
     return np.logical_and(y_true, y_pred).sum()
 
